@@ -1,13 +1,13 @@
 package com.example.demo;
 
 public class ChatClient {
-	private String Clientname;
+	private String name;
 
-	public String getClientname() {
-		return Clientname;
+	public String getname() {
+		return name;
 	}
 
-	public void setClientname(String clientname) {
-		Clientname = clientname;
+	public void setname(String clientname) {
+		name = clientname;
 	}
 }

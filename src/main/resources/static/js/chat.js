@@ -18,7 +18,7 @@ function connect() {
     stompClient.connect({}, function (frame) {
         setConnected(true);
         console.log('Connected: ' + frame);
-        stompClient.subscribe('/topic/getResponse', function (response) {
+        stompClient.subscribe('/topic/Chatroom', function (response) {
         	console.log(response)
             showConversation(JSON.parse(response.body).responseMessage); //
         });
@@ -36,7 +36,7 @@ function disconnect() {
 
 //傳送訊息方法
 function sendName() {
-	var name = $("#name").val()
+	var name = $("#name").val();
 	console.log(name);
 	console.log(stompClient);
     stompClient.send("/messageControl", {}, JSON.stringify({'name': name})); 
