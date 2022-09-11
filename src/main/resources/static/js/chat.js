@@ -2,7 +2,7 @@ var stompClient = null;
 
 
 function connect() {
-	var socket = new SockJS('/MYChatroom');
+	var socket = new SockJS('/Chatroom/MYChatroom');
 	stompClient = Stomp.over(socket);
 	stompClient.connect({}, function(frame) {
 		console.log('Connected: ' + frame);
